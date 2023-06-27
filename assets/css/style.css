@@ -35,6 +35,7 @@
 position: relative;
 }
 .banner__imagen{
+    background: url(../img/banner.png) no-repeat center / cover;
     width: 100%;
     height: calc(100vh - 72px);
 }
@@ -73,10 +74,10 @@ font-weight: 100;
 .recetas{
     background-color: #dab997;
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 5rem 0 0 5rem;
-
+    align-items: center;
 }
 .receta{
     background-color: #fdfdfd;
@@ -174,4 +175,96 @@ color: #595959;
 font-size: 1.25rem;
 text-transform: lowercase;
 
+}
+
+/* FOOTER */
+
+.rodapie{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 5rem 2rem 0 2rem;
+
+}
+.rodapie__titulo{
+display: flex;
+color: #8c8888;
+font-weight: 400;
+font-size: 1.25rem;
+padding: 1.5625rem;
+}
+.rodapie__descripcion{
+    display: flex;
+    font-size: 2rem;
+    color: #8c8888;
+
+}
+.rodapie__lista{
+    gap: 1.25rem;
+    display: flex;
+
+}
+
+/* RESPONSIVE */
+
+@media screen  and (min-width: 0) {
+    .cabecera{
+        padding: 0 1rem;
+        justify-content: center;
+    }
+    .logo{
+        display: none;
+    }
+    .banner__titulo{
+        font-size: 3rem;
+    }
+    .banner__imagen{
+        height: calc(100vh-51px);
+    }
+
+
+
+    .personas{
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .persona{
+        align-items: center;
+        padding: 1.25rem;
+    }
+
+    .rodapie{
+        flex-direction: column;
+    }
+
+
+}
+@media screen  and (min-width: 768px) {
+    .cabecera{
+        padding: 0 5rem;
+        justify-content: space-between;
+    }
+    .logo{
+        display: block;
+    }
+    .banner__titulo{
+        font-size: 5.0625rem;
+    }
+    .banner__imagen{
+        height: calc(100vh-72px);
+    }
+
+    .personas{
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .persona{
+        align-items: center;
+        padding: 0;
+    }
+    .rodapie{
+        flex-direction: row;
+    }
 }
